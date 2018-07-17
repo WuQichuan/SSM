@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mrf.dao.EmployeeMapper">
+
+    <insert id="addEmployee" parameterType="com.mrf.pojo.Employee">
+
+        insert into tb_employee(EMP_NAME,EMP_AGE,EMP_SEX,EMP_DEPID)
+        values(#{empName},#{empAge},#{empSex},#{empDepId})
+    </insert>
+
+    <select id="getEmployeeById" parameterType="int" resultType="com.mrf.pojo.Employee">
+        select * from tb_employee where EMP_ID = #{empId}
+    </select>
+
+</mapper>
