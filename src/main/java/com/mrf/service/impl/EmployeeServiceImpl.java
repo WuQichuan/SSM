@@ -25,16 +25,17 @@ public class EmployeeServiceImpl implements IEmployeeService {
     private EmployeeMapper employeeMapper;
 
 
+    @Override
     public void addEmployee(Employee employee) {
         employeeMapper.addEmployee(employee);
     }
 
-
+    @Override
     public Employee getEmployeeById(Employee employee) {
         return employeeMapper.getEmployeeById(employee.getEmpId());
     }
 
-
+    @Override
     public void updateEmployee(Employee employee) {
 
     }
